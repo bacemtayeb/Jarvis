@@ -1,5 +1,3 @@
-#This code was created by : Bacem Tayeb
-# All rights reserved @2017
 import speech
 import datetime
 import subprocess
@@ -8,10 +6,10 @@ import os
 import time
 from os.path import abspath, exists
 
-speech.say("Jarvis is Speaking .")
+speech.say(Jarvis is speaking ")
 
-def fun1():
-	var1=random.choice(("Hey","Hello","Good To see you","Hi"))
+def fun():
+	var1=random.choice(("Good morning Sir","Hello","Good To see you"))
 	spoken_text = speech.input()
 	speech.say(spoken_text)
 	if spoken_text in("Hi","Hello","Hey","Welcome","Good morning","Good afternoon"):
@@ -21,72 +19,85 @@ def fun1():
 	else:
 		None
 
-	
+
 def commands():
 	speech.say("What can I do for you ")
-	les=random.choice(("Open browser","Open chrome","Open Mozilla","Start browser","Run browser"))
-	phrase=speech.input()
-	while 1==1 :
-		for word in les:
-			if word==phrase:
-				print"Opening Browser"
-				f_path = abspath("browser.bat")
-				if exists(f_path):
-					os.system("browser.bat")
+	les=("Open browser","Open chrome","Open Mozilla","Start browser","Run browser")
+	phrase1=speech.input()
+	for phrase1 in les:
+		f_path = abspath("a.bat")
+		if exists(f_path):
+			os.system("a.bat")
+		break
 		
+def fun1():
+	les3=("Date","What's the date","Tell me the date","Show me the date")
+	phrase1=speech.input()
+	for phrase1 in les3:
+		print"Showing Time"
+		a=time.strftime('%X %x %Z')
+		'16:08:12 05/08/03 AEST'
+		print a
+		speech.say(a)
+		break
 		
-		les1=("Who are you ?")
-		if les1==phrase:
-				speech.say("I'm Jarvis.")
-				print"My name is Jarvis. I'm designed to answer your questions Sir .  "
-			
-		les2=("Tell me a joke")
-		if les2==phrase:
-			speech.say("I'm programmer , I have no life !")
-		les3=random.choice(("Date","What's the date","Tell me the date","Show me the date"))
-		for word in les3:
-			print"Showing Time"
-			if word==phrase:
-				a=time.strftime('%X %x %Z')
-				'16:08:12 05/08/03 AEST'
-				print a
-				speech.say(a)
-		les4=random.choice(("Open Calculator","Use Calculator","Start Calculator","Show Calculator"))
-		for word in les4:
-			print"Opening Calculator"
-			if word==phrase:
-				os.system('start calc.exe')
-		les5=("Close your eyes")
-		if phrase==les5:
-			f_path = abspath("eye.bat")
-			if exists(f_path):
-				os.system("eye.bat")
+def fun2():
+	les2=("Tell me a joke")
+	phrase3=speech.input()
+	for phrase3 in les2:
+		speech.say("I'm programmer, I have no life !")
+		break
+	
+def fun3():
+	les5=("Close your eyes")
+	phrase4=speech.input()
+	for phrase4 in les5:
+		f_path = abspath("eye.bat")
+		if exists(f_path):
+			os.system("eye.bat")
 		else:
 			None
-			
-		les7="Open youtube"
-		if phrase==les7:
-			speech.say("I will open Youtube")
-			print"Opening Youtube"
-			f_path = abspath("youtube.bat")
-			if exists(f_path):
-				os.system("youtube.bat")
-				
-		les8="Open Facebook"
-		if phrase==les8:
-			speech.say("I will open Facebook")
-			print"Opening Facebook..."
-			f_path = abspath("Facebook.bat")
-			if exists(f_path):
-				os.system("Facebook.bat")
-				
-		les9="Open Email"
-		if phrase==les9:
-			speech.say("I will open your email")
-			print"Opening Email ..."
-			f_path = abspath("Email.bat")
-			if exists(f_path):
-				os.system("Email.bat")
+		break
+
+def fun4():
+	les7="Open youtube"
+	phrase5=speech.input()
+	for phrase5 in les7:
+		speech.say("I will open Youtube")
+		print"Opening Youtube"
+		f_path = abspath("youtube.bat")
+		if exists(f_path):
+			os.system("youtube.bat")
+		break
+	
+def fun5():
+	les8="Open Facebook"
+	phrase6=speech.input()
+	for phrase6 in les8:
+		speech.say("I will open Facebook")
+		print"Opening Facebook..."
+		f_path = abspath("Facebook.bat")
+		if exists(f_path):
+			os.system("Facebook.bat")
+		break
+def fun6():
+	les9="Open Email"
+	phrase7=speech.input()
+	for phrase7 in les9:
+		speech.say("I will open your email")
+		print"Opening Email ..."
+		f_path = abspath("Email.bat")
+		if exists(f_path):
+			os.system("Email.bat")
+		else:
+			None
+		break
 		
-fun1()
+fun()
 commands()
+fun1()
+fun2()
+fun3()
+fun4()
+fun5()
+fun6()
