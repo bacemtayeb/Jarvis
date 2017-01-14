@@ -25,9 +25,9 @@ def commands():
 	les=("Open browser","Open chrome","Open Mozilla","Start browser","Run browser")
 	phrase1=speech.input()
 	for phrase1 in les:
-		f_path = abspath("a.bat")
+		f_path = abspath("browser.bat")
 		if exists(f_path):
-			os.system("a.bat")
+			os.system("browser.bat")
 		break
 		
 def fun1():
