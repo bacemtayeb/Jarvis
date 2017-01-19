@@ -11,7 +11,6 @@ speech.say("Jarvis is speaking ")
 def fun():
 	var1=random.choice(("Good morning Sir","Hello","Good To see you"))
 	spoken_text = speech.input()
-	speech.say(spoken_text)
 	if spoken_text in("Hi","Hello","Hey","Welcome","Good morning","Good afternoon"):
 		speech.say(var1)
 	elif spoken_text=="goodbye":
