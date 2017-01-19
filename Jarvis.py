@@ -6,7 +6,7 @@ import os
 import time
 from os.path import abspath, exists
 
-speech.say(Jarvis is speaking ")
+speech.say("Jarvis is speaking ")
 
 def fun():
 	var1=random.choice(("Good morning Sir","Hello","Good To see you"))
