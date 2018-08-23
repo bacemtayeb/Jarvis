@@ -1,2 +1,1 @@
-#Created by : Bacem Tayeb
-
+A simple personal assistant.
